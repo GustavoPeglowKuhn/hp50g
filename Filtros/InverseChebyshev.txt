@@ -1,16 +1,16 @@
-Inverse Chebyshev               .
+______________ Inverse Chebyshev
 |Hi,n[j(w/w0)]|=
-  ((eps**2.Cn**2.(w0/w))**0.5) /
-  ((1+eps**2.Cn**2.(w0/w))**0.5)
+  ((eps^2.Cn^2.(w0/w))^0.5) /
+  ((1+eps^2.Cn^2.(w0/w))^0.5)
 
-eps = (10**(-as/10) -1)**0.5
+eps = (10^(-as/10) -1)^0.5
 
-ni=acosh(((10**(-as/10) -1)/
-      (10**(-ap/10) -1))**0.5)  /
+ni=acosh(((10^(-as/10) -1)/
+      (10^(-ap/10) -1))^0.5)  /
    acosh(ws/wp)
 
 p = sig+jw
-p**-1 =(sig-jw)/(sig**2+w**2)
+p^-1 =(sig-jw)/(sig^2+w^2)
 
 D = asinh(1/eps)/n
 
@@ -21,8 +21,8 @@ phim = pi(2m+1)/(2n)
  m=0,1,...,(n/2)-1 [n even]/
  m=0,1,...,((n-1)/2)-1 [n odd]
 
-sigm = sig'm/(sig'm**2+w'm**2)
-wm =    -w'm/(sig'm**2+w'm**2)
+sigm = sig'm/(sig'm^2+w'm^2)
+wm =    -w'm/(sig'm^2+w'm^2)
 sigr = -1/sinh(D)
 
 wzm = sec
@@ -32,9 +32,9 @@ H0(s) = (S+sinh(D))/sinh(D)
 Hm(s)=B_2m.(SS+A_1m S+A_2m) /
       A_2m.(SS+B_1m S+B_2m)
  B_1m = -2sigm
- B_2m = sigm**2 + wm**2
+ B_2m = sigm^2 + wm^2
  A_1m = -2sigzm = 0.0
- A_2m = sigzm**2+Wzm**2 = Wzm**2
+ A_2m = sigzm^2+Wzm^2 = Wzm^2
 
 Hi,n(s)=Prod(Hm(s))
  m=0,1,...,(n/2)-1 [n even]

@@ -1,14 +1,14 @@
-Chebyshev                       .
+_______________________Chebyshev
 |H|=1/
-    (1+eps**2.Cn**2.(w/w0))**0.5
+    (1+eps^2.Cn^2.(w/w0))^0.5
 
-eps = (10**(-ap/10) -1)**0.5
+eps = (10^(-ap/10) -1)^0.5
 
-Cn(w) = cos (n acos (w))   , w<=0
-Cn(w) = cosh(n acosh(w))   , w>0
+Cn(w) = cos (n acos (w))  , w<=0
+Cn(w) = cosh(n acosh(w))  , w>0
 
-nc=acosh(((10**(-as/10) -1)/
-      (10**(-ap/10) -1))**0.5)  /
+nc=acosh(((10^(-as/10) -1)/
+      (10^(-ap/10) -1))^0.5)  /
    acosh(ws/wp)
 
 D = asinh(a/eps)/n
@@ -27,16 +27,16 @@ H0(s) = sinh(D)/(S+sinh(D))
 
 Hm(s)=B_2m/(SS+B_1m S+B_2m)
  B_1m = -2sigm
- B_2m = sigm**2 + wm**2
+ B_2m = sigm^2 + wm^2
 
-G = 10**(ap/20)
+G = 10^(ap/20)
 
 Hc,n(S) = G.Prod(B_2m) /
       Prod(SS+B_1m S+B_2m)
  m=0,1,...,(n/2)-1 [n even]
 
 Hc,n(S) = sinh(D).Prod(B_2m) /
-  S+sinh(D)).Prod(SS+B_1m S+B_2m)
+  S+sinh(D))Prod(SS+B_1m S+B_2m)
  m=0,1,...,((n-1)/2)-1 [n odd]
 
 pag 37 -> 39

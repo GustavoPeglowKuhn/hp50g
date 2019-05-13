@@ -1,14 +1,14 @@
-Butterworth                     .
+_____________________Butterworth
 |H|=1/
-    (1+eps**2.(w/w0)**(2n))**0.5
+    (1+eps^2.(w/w0)^(2n))^0.5
 
-eps = (10**(-ap/10) -1)**0.5
+eps = (10^(-ap/10) -1)^0.5
 
-n=log((10**(-as/10) -1)/
-      (10**(-ap/10) -1))  /
+n=log((10^(-as/10) -1)/
+      (10^(-ap/10) -1))  /
   2log(ws/wp)
 
-R = eps**(-1/n)
+R = eps^(-1/n)
 tetm = pi(2m+n+1)/2n
  m=0,1,...,(n/2)-1 [n even]
  m=0,1,...,((n-1)/2)-1 [n odd]
@@ -22,7 +22,7 @@ H0(S) = R/(S+R)
 
 Hm(s)=B_2m/(SS+B_1m S+B_2m)
  B_1m = -2sigm
- B_2m = sigm**2 + wm**2
+ B_2m = sigm^2 + wm^2
 
 Hb,n(S) = Prod(Hm(S))
 

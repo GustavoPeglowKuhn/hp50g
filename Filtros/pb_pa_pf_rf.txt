@@ -1,10 +1,10 @@
-Passa baixas:                   .
+___________________Passa baixas:
 Ohm_rl = ws/wp = fs/fp
 
-kn**2 = (10**(-as/10) -1)/
-        (10**(-ap/10) -1)
+kn^2 = (10^(-as/10) -1)/
+        (10^(-ap/10) -1)
 
-nB=log(kn**2)/
+nB=log(kn^2)/
   2log(Ohm_rl)
 
 nC= nI= acosh(kn)  /
@@ -12,15 +12,15 @@ nC= nI= acosh(kn)  /
 
 rt = 1/Ohm_rl
 nE = CEI(1/rt).
-     CEI((1-kn**2)**0.5)  /
-  CEI((1-1/(rt**2))**0.5).CEI(kn)
+     CEI((1-kn^2)^0.5)  /
+  CEI((1-1/(rt^2))^0.5).CEI(kn)
 
-unnormalize:
+____________________unnormalize:
 SL = s/w0
  if (Chebyshev) w0 = ws
  else           w0 = wp
 
-H(s)=(A1S+A2)/(B1S+B2)  p/ S=s/w0
+H(s)=(A1S+A2)/(B1S+B2) p/ S=s/w0
     =(A1.s+A2.w0)/(B1.s+B2.w0)
     =(a1.s+a2)/(b1.s+b2)
  a1 = A1, b1 = B1
@@ -29,16 +29,16 @@ H(s)=(A1S+A2)/(B1S+B2)  p/ S=s/w0
 H(s)=(a0ss+a1s+a2)/(b0ss+b1s+b2)
  a0 = A0, b0 = B0
  a1 = A1.w0, b1 = B1.w0
- a2=A2(w0**2), b2=B2(w0**2)
+ a2=A2(w0^2), b2=B2(w0^2)
 
 
-Passa altas:                    .
+____________________Passa altas:
 Ohm_rh = wp/ws = fp/fs
 SH = w0/s
 
-H(s)=(A1S+A2)/(B1S+B2)  p/ S=w0/s
+H(s)=(A1S+A2)/(B1S+B2) p/ S=w0/s
     =(A1(w0/s)+A2)/(B1(w0/s)+B2)
-  =(A2/B2)(s+w0A1/A2)/(s+w0B1/B2)
+  =(A2/B2)(s+w0A1/A2)/(s+w0B1/B2
     =(A2/B2)(a1.s+a1)/(b1.s+b2)
   a1 = 1, b1 = 1
   a2=(A1/A2)w0, b2=(B1/B2)w0
@@ -49,67 +49,67 @@ H(s)=(A0SS+A1S+A2)/(B0SS+B1S+B2)
             (b0SS+b1S+b2)
  a0 = 1,          b0 = 1
  a1=(A1/A2)w0,    b1=(B1/B2)w0
- a2=(A1/A2)w0**2, b2=(B1/B2)w0**2
+ a2=(A1/A2)w0^2, b2=(B1/B2)w0^2
 
 
 
-Passa Faixa:                    .
+____________________Passa Faixa:
 Ohm_rp = (ws2-ws1)/(wp2-wp1)
        = (fs2-fs1)/(fp2-fp1)
 
-SP = (s**2+w0**2)/(BW.s)
+SP = (s^2+w0^2)/(BW.s)
  if(inverse Chebyshev)
-    w0 = (ws2*ws1)**0.5
+    w0 = (ws2*ws1)^0.5
     BW = ws2-ws1
  else
-    w0 = (wp2*wp1)**0.5
+    w0 = (wp2*wp1)^0.5
     BW = wp2-wp1
 
 H(s)=(A1S+A2)/(B1S+B2)  
-      p/ S=(s**2+w0**2)/(BW.s)
+      p/ S=(s^2+w0^2)/(BW.s)
    =(a0ss+a1s+a2)/(b0ss+b1s+b2)
  a0 = 1,          b0 = 1
  a1=(A1/A2)w0,    b1=(B1/B2)w0
- a2=(A1/A2)w0**2, b2=(B1/B2)w0**2 
+ a2=(A1/A2)w0^2, b2=(B1/B2)w0^2 
 
 H(s)=(A0SS+A1S+A2)/(B0SS+B1S+B2)
-      p/ S=(s**2+w0**2)/(BW.s)
-inverse Chebyshev and elliptic:
-H(s) = (ss+a1.s+a2).(ss+a3.s+a4)/
-       (ss+b1.s+b2).(ss+b3.s+b4)
-Butterworth and Chebyshev:
-H(s) = (A2.BW**2.s**2) /
+      p/ S=(s^2+w0^2)/(BW.s)
+__inv Chebyshev and elliptic:
+H(s) = (ss+a1.s+a2)(ss+a3.s+a4)/
+       (ss+b1.s+b2)(ss+b3.s+b4)
+__Butterworth and Chebyshev:
+H(s) = (A2.BW^2.s^2) /
        (ss+b1.s+b2).(ss+b3.s+b4)
 
 
-Rejeita Faixa:                  .
+__________________Rejeita Faixa:
 Ohm_rs = (wp2-wp1)/(ws2-ws1)
        = (fp2-fp1)/(fs2-fs1)
 
-SS = (BW.s)/(s**2+w0**2)
+SS = (BW.s)/(s^2+w0^2)
  if(inverse Chebyshev)
-    w0 = (ws2*ws1)**0.5
+    w0 = (ws2*ws1)^0.5
     BW = ws2-ws1
  else
-    w0 = (wp2*wp1)**0.5
+    w0 = (wp2*wp1)^0.5
     BW = wp2-wp1
 
 H(s)=(A1S+A2)/(B1S+B2)  
-      p/ S=(BW.s)/(s**2+w0**2)
+      p/ S=(BW.s)/(s^2+w0^2)
    =(a0ss+a1s+a2)/(b0ss+b1s+b2)
  a0 = 1,       b0 = 1
  a1=(A1/A2)BW, b1=(B1/B2)BW
- a2=w0**2,     b2=w0**2
+ a2=w0^2,     b2=w0^2
 
 H(s)=(A0SS+A1S+A2)/(B0SS+B1S+B2)
-      p/ S=(BW.s)/(s**2+w0**2)
+      p/ S=(BW.s)/(s^2+w0^2)
 inverse Chebyshev and elliptic:
  H(s) =
-    A2.(ss+a1.s+a2).(ss+a3.s+a4)/
-    B2.(ss+b1.s+b2).(ss+b3.s+b4)
+    A2.(ss+a1.s+a2)(ss+a3.s+a4)/
+    B2.(ss+b1.s+b2)(ss+b3.s+b4)
 Butterworth and Chebyshev:
  H(s) = 
-     A2.((s**2+w0**2)**2) /
-     B2.(ss+b1.s+b2).(ss+b3.s+b4)
+     A2.((s^2+w0^2)^2) /
+     B2.(ss+b1.s+b2)(ss+b3.s+b4)
 
 
