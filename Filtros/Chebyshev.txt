@@ -29,5 +29,14 @@ Hm(s)=B_2m/(SS+B_1m S+B_2m)
  B_1m = -2sigm
  B_2m = sigm**2 + wm**2
 
+G = 10**(ap/20)
+
+Hc,n(S) = G.Prod(B_2m) /
+      Prod(SS+B_1m S+B_2m)
+ m=0,1,...,(n/2)-1 [n even]
+
+Hc,n(S) = sinh(D).Prod(B_2m) /
+  S+sinh(D)).Prod(SS+B_1m S+B_2m)
+ m=0,1,...,((n-1)/2)-1 [n odd]
 
 pag 37 -> 39
