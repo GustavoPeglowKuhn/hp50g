@@ -1,0 +1,114 @@
+---- Q1 ----
+//Diagra de impedancias//
+
+Base 50MVA 16kv no gerador
+
+GS: 40MVA, 18kV, X=15%
+Trafo 1-2: 40MVA, 18/138kV, X=8%
+Trafo 3-4: 15MVA, 138/13kV, X=10%
+Linha 2-3: Xserie=40 ohms, Yshunt=4mS
+Carga 4: passiva, 10MVA, costeta=0.95 (em atraso), 13.8kV
+
+Cálculo das bases:
+
+Gerador: Sb=50MVA, 16kV
+Linha: Sb=50MVA, Vb=16*(138/18)=122.67kV, Zb=Vb^2/Sb=300.94
+Carga: Sb=50MVA, Vb=122.67*(13/138)=11.56kV, Zb=Vb^2/Sb=2.673
+
+Impedâncias:
+
+GS1: X=0.15*(18/16)^2*(50/40)=j0.2373pu
+T12: X=0.08*(18/16)^2*(50/40)=j0.1266pu
+T34: X=0.1*(138/122.67)^2*(50/15)=j0.4219pu
+LT: Xserie = 40/300.94=j0.1324pu
+    Ysh/2=(j4*10^-3)/2=j2*10^-3
+    Xsh/2=1/Ysh=-j500ohms
+    Xsh/2=-j500/300.94=-j.6615pu
+Carga4: ZL= (13.8^2)/10=19.044ohms angulo(18.19º)
+        ZL=(19.044ohms angulo(18.19º))/2.673=6.775+j2.22
+
+---- Q2 ----
+
+Resistência Equivalente
+
+Primeiro passar todas as resistências para condutâncias,
+aterrar o ponto d (referência) e montar a Ybarra.
+
+Ybarra =   1  -0.5   0
+         -0.5  1.5 -0.5
+           0  -0.5   1
+
+Fazer a inversa da Ybarra para obter a Zbarra. O elemento
+Zbarra(1,1) será a resposta. 1.25ohms
+
+
+---- Q3 ----
+
+Sistema elétricom composto por apenas duas barras. 
+1ª iteração Gauss-Seidel. Partida plana.
+
+Carga: 0.8+j0.4pu na barra 2
+Linha de trasmissão: 0.05+j0.1pu na barra 1
+Tensão terminal: 1.05pu
+
+Ys=1/(0.05+j0.1)=4-j8pu
+V2=1.05pu
+
+Barra 1: Vteta: V=1.05
+                teta=0º
+Barra 2: PV: P=-0.8pu (devido a carga)
+             V=1.05pu
+Ybarra = 4-j8  -4+j8
+        -4+j8   4-j8
+
+p/ 1ª iteração,
+E2(1)=(1/(4-j8))*((-0.8-jQ2calc)/(1.05)-(-4+j8)*1.05)
+
+S2calc=E2*(Y21conj*E1conj+Y22conj*E2conj)
+S2calc=1.05*((-4-j8)*1.05+(4+j8)*1.05)
+S2calc=0; Q2calc=0
+
+E2(1)=(1/(4-j8))*((-0.8-j0)/(1.05)-(-4+j8)*1.05)
+E2(1)=1.0148ang(-4.3059)pu
+
+Corrigindo E2(1)=1.05ang(-4.3059)pu
+Portanto, E1=1.05ang(0)pu
+          E2=1.05ang(-4.3059)pu
+
+---- Q4 ----
+
+Sistema 4 barras, classe 230 kV
+Linha de comprimento físico reduzido
+
+Como a linha é curta: fluxo P = maior teta para menor teta
+                      fluxo Q = maior módulo para menor módulo
+
+Barra 1: carga
+Barra 3: geração
+Barra 2 e 4: Não dá pra afirmar nada
+
+---- Q5 -----
+
+Caracterisicas de estatismo
+Geradores G1 e G2
+G1: 600MW 4%;  G2: 500MW 5%
+Demanda 700MW -> G1:400MW e 300MW 60Hz
+Redução para 600MW
+
+deltaf/fr=100/(600/0.04+500/0.05)=0.004pu
+
+p/ fr=60Hz --> 0.004*60=0.24Hz
+f = 60.24Hz
+
+deltaPf1=((600/0.04)/(600/0.04+500/0.05))*(-100)=-60MW
+deltaPf2=((500/0.05)/(600/0.04+500/0.05))*(-100)=-40MW
+
+Pf1=400+(-60)=340MW
+Pf2=300+(-40)=260MW
+
+
+
+
+
+
+

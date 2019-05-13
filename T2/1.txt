@@ -1,0 +1,26 @@
+dH = (Idl x ar)/(4piRR)         .
+Intl(D.ds) = Qenc
+Intl(H.dl) = Ienc
+
+B = flux/S
+B = uH
+H = -grad(Vm)  (p/J=0)
+A = Int( (uIdl)/(4pi|R|) )
+Wvol = BH/2
+Lap(A) = -uJ
+
+H = I(cos a2-cos a1)/(4pi ro)aphi
+
+B = rot(A)
+A = int(u0 Idl/(4piR))
+B=(u0/4pi).int(idl x ar/(RR))
+flux = intl(A.dl)
+
+cond: rot H = 0
+H1t = H2t _ B1n = B2n
+tg a1 = H1t/H1n
+tg a1/tg a2 = u1/u2 = eps1/eps2
+
+Wvol = 0.5 BH
+nI = Hl = flux.Rm
+Rm = l/Su

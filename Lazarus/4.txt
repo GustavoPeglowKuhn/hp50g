@@ -1,0 +1,24 @@
+Linha trifásica 345kV  500km  6Hz
+R = 0,08 ohms/km    L = 1,336mH/km
+G = 3,75x10^-8 S/km    C = 8,6nF/km
+
+Carga de 50MVA cos(phi) = 0,8 avanço  340kV
+
+Calcular tensão na linha a 100km do transmissor
+
+Z = (0,08 + j0,5036) ohms
+Y = (0,375 + j32,42)x10^-7 S
+
+Zc = raiz(Z/Y) = 396,6995<-4,18° ohms
+gama = raiz(Z.Y) = 0,0013<85,6°
+
+x = 400
+gamax = 0,52<85,6°
+
+Ir = Sr/(raiz(3).Er) = 84,904<36,87° A
+
+E(x) = [(Er+Zc.Ir)/2].e^gamax + [(Er-Zc.Ir)/2].e^-gamax
+
+E(400) = 288,2259<4,25° kV
+
+V(400) = 288,226kV

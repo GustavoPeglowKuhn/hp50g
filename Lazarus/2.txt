@@ -1,0 +1,33 @@
+Desligamento de carga
+
+Ef = 1kV   Zf = 50ohms
+Zo = 400ohms   ZL = 200ohms
+
+Regime permanente:
+E0 = 800V
+I0 = 4A
+
+Tes = (50-400)/(50+400) = -7/9
+Ter = 1
+
+Abertura da chave:
+Ilinha = -I0 = -4A
+Elinha = -Zo.Ilinha = 1600V
+
+Diagrama de treliças:
+800
+1600
+-1244,44
+-1244,44
+967,89
+967,89
+-752,81
+
+Gráfico:
+
+1156	  -----
+1094                -----
+879	       -----
+800  -----
+
+converge para 1kV

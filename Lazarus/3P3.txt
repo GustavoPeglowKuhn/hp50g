@@ -1,0 +1,181 @@
+P3
+
+1.LT AEREA TRIF MONO, SEM PERDAS
+l=300km, linha opera a vazio 
+V=Vmcos(Wt), 60Hz, quando a tensao eh conectada
+em seu terminal transmissor em t=0s
+Fazer grafico da tensao de 0<t<2,5ms
+l=300km  v=3*10^-8m/s
+l/v=1ms
+Coefr=+1 (linha a vazio)
+t<1ms --- Er=0
+t=1ms --- Er=2Vm
+Após 1ms:
+Er=2Vmcos(377(t-1ms))
+Em t=2,5ms
+Er=2Vmcos(377(0,0025-0,001))
+Er=2Vmcos(0,5655) - EM RADIANOS
+Er=1,6886Vm
+
+FAZER GRÁFICO
+-------------------------------------------
+2.O sistema encontra-se em regime permanente
+Traçar valores até 5l/v depois que ABRIR a chave
+Ef=1kV Zf=50ohm S Z0=400ohm R chave ZL=200ohm
+
+*Em RP, antes da abertura da chave
+I0=1kV/50+200=4A
+E0=4*200=800V
+
+*Com abertura da chave
+Terá corrente de cancelamento de -4A
+-(-4)*Z0=4*400=1600V
+
+CoefS=Zf-Z0/Zf+Z0= -0,7778
+CoefR=ZL-Z0/ZL+Z0= +1 (circuito aberto)
+
+Comeca a tracar do RECEPTOR
+    E0=800V
+S--------------R
+-1600
+-1244,48
+-1244,48
+967,9565
+967,9565
+-752,8765
+
+grafico das tensoes
+de 0 a 1l/v= 800v
+de 1l/v ate 3l/v= 1155,52
+de 3l/v ate 5l/v= 878,99
+de 5l/v ate 7l/v= 1094,2
+-------------------------------------------------
+3.Desenvolver expressão para o quadripolo....
+--A1B1C1D1-------
+            '
+            Y
+            '
+------------------
+Ix=ErY+Ir
+
+Es=A1Er + B1Ix
+Is=C1Er + D1Ix
+SUBSTITUI IX
+
+Es=(A1+B1Y)Er + B1Ir
+Is=(C1+D1Y)Er + D1Ir
+[Es;Is]=[A B; C D] * [Er;Ir]
+A=A1+B1Y
+B=B1
+C=C1+D1Y
+D=D1
+----------------------------------------------------
+4. LT TRIF, CLASSE 345kV, 500km
+R=0,08ohm/km        L=1,336mH/km
+G=3,75*10^-8S/km    C=8,6*10^-9F/km
+
+LT alimenta carga de 50MVA, cos phi=0,8 em avanco
+com v=340kV.
+Calcular tensoes entre fases que ocorre a km do transmissor
+|Ir|=50M/sqrt(3)*340k=84,9044A
+Ir=84,9044ang(36,87) A
+
+z=R + jXL     y=G + jXC
+Zc=sqrt(z/y) = 396,5771< -4,1818
+Gama=sqrt(z*y)=1,0858*10^-4 +j1,2811*10^-3
+Gamax=Gama*400
+Gamax= 0,0434 + j0,51244
+   alpha(Neper)   Beta(rad)
+
+|Er|=340k/sqrt(3)= 196,3kV
+
+Er(400)=(Er+ZcIr/2)*e^Gamax + (Er-ZcIr/2)*e^-Gamax
+Er(400)= 164,43ang(6,5472)kV por fase
+
+|Elinha|= 164,43*sqrt(3)=284,86kV
+-------------------------------------------------------
+5.LT AEREA TRIF, CLASSE 380kV
+A=D=0,7363 e^j1,7
+B=160,76 e^j86,7 ohm
+C=0,002861 E^J90,4 s
+Usina opera de tal forma que a tensao no transmissor seja mantida
+380kV independente da carga. A tensao do receptor a vazio nao deve
+ultrapassar os 380kV
+
+Em vazio, Vr=Vs=380kV, com P=0
+Pr=VrVs/B cos (Bb-theta) - A/B Vr^2 cos(Bb-Ba)
+0=cos(86,7-theta)-0,7363cos(86,7-1,7)
+theta=0,3794 graus
+
+Qr=VrVs/B sen(Bb-theta) - A/B Vr^2 sen(Bb-Ba)
+Qr=237,5293MVar
+Valor positivo indica carga indutiva por definicao
+Deve ser instalado um banco de indutores com esta potencia.
+--------------------------------------------------
+6.LT AEREA BIFILAR (TEM DESENHO DE OSCILOSCOPIO)
+Energizada no transmissor em t=0 por 100V
+XL=0,4858ohm/km  e bc=3,3639microS/km
+*pelo grafico t=1,525ms
+sem perdas - R=G=0 - V=3*10^8m/s
+l=t*v
+l=457,5km
+Z0=sqrt(L/C)=sqrt(XL/XC)=380,0206ohm
+Vd=100V    Vr=-60
+coefr=-60/100=-0,6
+coefr=ZL-Z0/ZL+Z0
+-0,6=ZL-380/ZL+380
+ZL=95ohm
+-------------------------------------------------------
+
+7. QUESTAO DE ALTERNATIVAS 
+Pr=1  Qr=0,2pu  Xs=0,25pu
+LINHA CURTA
+A=D=1       B=Z=0,25<90
+II e III verdadeiras
+------------------------------------------------------
+8.Esboce o perfil de tensoes ao longo de uma LT
+sem perdas que opere na SIL. 
+gráfico constante
+Justificativa: Na SIL, a Zc=Z0, portanto não ha reflexao, portanto
+as tensoes em quaisquer pontos serão as mesmas ao decorrer da linha. 
+-------------------------------------------------------
+9.CONSIDERE QUE A LINHA SEJA DE INTERLIGACAO....
+Vr=380kV Vs=400kV theta=28 (nao pode ultrapassar isso)
+A=D=0,7363<1,7
+B=160,76<86,7
+C=0,002861<90,4
+Pr=VrVs/|B|cos(Bb-theta)-|A|/|b|Vr^2cos(Bb-Ba)
+Pr=433,5678MW
+Qr=VrVs/|B|sen(Bb-theta)-|A|/|b|Vr^2sen(Bb-Ba)
+Qr=149,0398MVAr
+------------------------------------------------------
+10.Três subestacoes A,B e C, espacadas por 75km...
+
+B e C - subterraneos v=2*10^8 m/s
+
+As demais sao aereas  v= 3*10^8 m/s
+
+
+------A-------B-------C------
+
+400     600     200/3      600
+
+Determinar tensao em B, em t=0,8ms vindo pela linha de 400
+
+
+Calcula os coeficientes de reflexao
+
+F12=+0,2 F23=-0,8 F34=+0,8
+
+Faz a trelica com 3 barras - A B e C 
+(lembrar dos tempos diferentes)
+
+Tab=0,25ms 
+Tbc=0,375ms
+
+Eb(0,25ms)=0+1,2-0,96=0,24 pu
+
+Eb(0,75ms)=0,24+0,192-0,1536=0,2784 pu
+
+
+Eb em 0,8ms = 0,2784 pu

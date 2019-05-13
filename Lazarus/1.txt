@@ -1,0 +1,14 @@
+linha monofásica sem perdas 300km
+fonte ideal de Vm.cos(Wt) 60Hz é conectada em t = 0
+Fazer gráfico da tensão no receptor de 0 a 2,5ms
+
+l/vp = 1ms
+
+Para t < 1ms -> Er = 0
+
+Para t = 1ms -> Ocorre a primeira reflexão
+Er = 2Vm
+
+Para t > 1m -> Er = 2Vm.cos(W.[t - t0])
+
+Para t = 2,5ms -> Er = 1,6886Vm

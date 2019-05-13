@@ -1,0 +1,23 @@
+rot H = J + dD/dt               .
+div B = 0
+rot E = -dB/dt
+div D = rov
+
+J = sig E
+D = eps E
+B = uH
+
+vacuo:
+  J = 0
+  eps = eps0
+  u = u0
+
+estatica:
+  J = 0
+  d/dt = 0
+
+n mag n dieletrico:
+  sig linear n anisotropico
+  eps = eps0
+  u = u0
+

@@ -1,0 +1,12 @@
+012345678901234567890123456789012
+dH = (Idl x ar)/(4piRR)
+
+H = I(cos a2-cos a1)/(4pi ro)aphi
+
+H=I/(4pi ro)aphi _ i de 0 a inf
+H=I/(2pi ro)aphi _ i de -a+ inf
+
+rot(H) = J
+H = I/(2pi ro) aphi
+
+H = -grad(Vm) if J=0

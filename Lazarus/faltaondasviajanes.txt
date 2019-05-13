@@ -1,0 +1,7 @@
+São utilizados algoritmos para determinar o tempo de viagem da onda viajante do ponto defeito (falta)
+até os terminais da linha de transmissão conhecendo-se a velocidade de propagação das ondas, de acordo
+com os parâmetros elétricos da linha para cada terminal determina-se a distância de falta. O curto-circuito
+e o circuito aberto provocam nas linhas de transmissão coeficientes de reflexão unitários. Se estivevermos 
+analisando tensões, o curto irá gerar u coeficiente de reflexão de tensã igual a -1 e para o circuio aberto 
+o coeficiente de reflexão de tensão igual a +1. Analisando esses coeficientes, podemos verificar se os valores
+de tensão ou corrente estão oscilando ou estão crescendo e assim determinar o tipo de falta.

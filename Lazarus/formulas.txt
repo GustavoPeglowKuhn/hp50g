@@ -1,0 +1,55 @@
+--Potências duas linhas--
+
+Ys=1/Zs
+Ys=gs+jbs
+
+Psik=gs(Vi^2)-gsViVkcos(tetaik)-bsViVksen(tetaik)
+Pshi=1/2(Gsh)(Vi^2)
+Pik=Psik+Pshi
+Qsik=-bs(Vi^2)+bsViVkcos(tetaik)-gsViVksen(tetaik)
+Qshi=-1/2(Bsh)(Vi^2)
+Qik=Qsik+Qshi
+
+
+Pski=gs(Vk^2)-gsViVkcos(tetaik)+bsViVksen(tetaik)
+Pshk=1/2(Gsh)(Vk^2)
+Pki=Pski+Pshk
+Qski=-bs(Vk^2)+bsViVkcos(tetaik)+gsViVksen(tetaik)
+Qshk=-1/2(Bsh)(Vk^2)
+Qki=Qski+Qshk
+
+PARA ELEVADO XL/R
+Pik=(ViVk/Xik)sen(tetaik)
+Pki=-(ViVk/Xik)sen(tetaik)
+
+Qik=Vi/Xik(Vi-Vkcos(tetaik))-1/2(Bsh)(Vi^2)
+Qki=Vk/Xik(Vk-Vicos(tetaik))-1/2(Bsh)(Vk^2)
+
+
+GAUSS-SEIDEL MÉTODO
+
+Barra PV
+S1calc=E1(0)(conj(Y11)conj(E1(0))+conj(Y12)conj(E2(0))+conj(Y13)conj(E3(0))+...)
+Qcalc=imag(Scalc)
+E1calc(1)=(1/Y11)((P1esp-j1Qcalc)/conj(E1(0))-Y12E2-Y13E3(0)-...)
+deltaE1=E1calc(1)-E1(0)
+E1=E1(0)_alfadeltaE1
+E1corr=V1esp.phase(E1)
+
+Barra PQ
+E1calc(1)=(1/Y11)((P1esp-j1Qesp)/conj(E1(0))-Y12E2-Y13E3(0)-...)
+deltaE1=E1calc(1)-E1(0)
+E1=E1(0)_alfadeltaE1
+
+
+deltaF/fref=(Li-Lf)/(G1/T1+G2/T2)
+deltaP1=((G1/T1)/(G1/T1+G2/T2)).(Lf-Li) 
+
+XL/R elevado
+P angulo adiantado p atrasado
+Q modulo maior p menor
+
+XL/R reduzido
+P modulo maior p menor
+Q angulo atrasado p adiantado
+

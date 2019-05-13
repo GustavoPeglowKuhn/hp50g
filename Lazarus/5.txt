@@ -1,0 +1,16 @@
+linha trifasica 60Hz 380kV
+conecta uma usina hidrelétrica a uma carga
+
+A = D = 0,7363e^j1,7°
+B = 160,76e^j86,7° ohms
+C = 0,002861e^j90,4° S
+
+Es = 380kV
+Ermax = 380kV
+
+Pr = 0
+theta = 0,3794°
+
+Qr = 237,53 MVAr
+
+Deve ser instalado um banco de indutores de 237,53 MVAr no terminal receptor.
