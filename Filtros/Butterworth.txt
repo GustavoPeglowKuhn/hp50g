@@ -8,17 +8,22 @@ n=log((10**(-as/10) -1)/
       (10**(-ap/10) -1))  /
   2log(ws/wp)
 
-r = eps**(-1/n)
-tetm = pi(2m+n+1)
+R = eps**(-1/n)
+tetm = pi(2m+n+1)/2n
  m=0,1,...,(n/2)-1 [n even]
  m=0,1,...,((n-1)/2)-1 [n odd]
 
-sigm=r cos(tetm)
+sigm=R cos(tetm)
 wm = R sin(tetm)
+
+sigR = -R
+
+H0(S) = R/(S+R)
 
 Hm(s)=B_2m/(SS+B_1m S+B_2m)
  B_1m = -2sigm
  B_2m = sigm**2 + wm**2
 
+Hb,n(S) = Prod(Hm(S))
 
 pag 25 -> 33

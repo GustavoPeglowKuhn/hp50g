@@ -18,7 +18,7 @@ sig'm = -sinh(D)sin(phim)
 w'm   =  cosh(D)cos(phim)
 
 phim = pi(2m+1)/(2n)
- m=0,1,...,(n/2)-1 [n even]
+ m=0,1,...,(n/2)-1 [n even]/
  m=0,1,...,((n-1)/2)-1 [n odd]
 
 sigm = sig'm/(sig'm**2+w'm**2)

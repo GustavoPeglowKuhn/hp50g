@@ -1,0 +1,10 @@
+**  potencia
+ x**y  = x elevado na y
+
+^  o  mesmo que **
+
+eps = epslon
+sig = sigma
+tet = teta
+phi = letra 'fi'
+ohm = omega
