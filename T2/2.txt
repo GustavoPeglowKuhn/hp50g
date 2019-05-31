@@ -1,0 +1,28 @@
+F = Q(E + u X B) = m.du/dt
+
+Idl = roV.u.dv = dQ u
+
+dF = Idl X B
+F = int(Idl X B) = I.int(dl X B)
+
+F1 = (u0I1I2/4pi).intL1(intL2(
+	  dl1 X (dl2Xar21)/R21^2))
+
+T = r X F
+
+A = (u0I/4pi)intL(dl/r)
+  = (u0Ipi.a^2.sin tet) aphi /
+        4 pi r^2
+  = u0 m X ar / (4 pi r^2)
+m = Ipi.a^2 az
+B = rot(A)
+
+ur = 1 + xr (suce. mag.)
+
+Wm = .5 L_1 I_1^2
+   + .5 L_2 I_2^2
+   + M_12 I_1 I_2
+
+M12 = Lam12/I2 = N2 Flux12 / I2
+M12 = M21
+ 

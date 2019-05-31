@@ -8,3 +8,5 @@ sig = sigma
 tet = teta
 phi = letra 'fi'
 ohm = omega
+
+X* = X conjugado

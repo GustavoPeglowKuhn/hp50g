@@ -1,0 +1,10 @@
+Vrms = (int(v(t)^2)/T)^20.5
+
+fp = P/S = cos(tetV - tetI)
+
+Z= V/I = (Vrms/Irms)<(tetV-tetI)
+
+S = Vrms . Irms
+S = V.I*/2
+
+C = P(tg t1 - tg t2)/((wVrms)^2)
