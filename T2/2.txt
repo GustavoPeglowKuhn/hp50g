@@ -1,6 +1,6 @@
-F = Q(E + u X B) = m.du/dt
+F = Q(E + v X B) = m.du/dt
 
-Idl = roV.u.dv = dQ u
+Idl = roV.v.dV = dQ v
 
 dF = Idl X B
 F = int(Idl X B) = I.int(dl X B)
@@ -23,6 +23,11 @@ Wm = .5 L_1 I_1^2
    + .5 L_2 I_2^2
    + M_12 I_1 I_2
 
-M12 = Lam12/I2 = N2 Flux12 / I2
+Phi = u N I S / l
+L = N Phi / I = u N^2 S / l
+
+M12 = Lam12/I2 = N2 Phi12 / I2
 M12 = M21
+
+
  
