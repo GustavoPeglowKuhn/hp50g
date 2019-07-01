@@ -1,0 +1,118 @@
+1)z
+  z  1-2
+  z  |H|
+  zyy4-3yyyyy
+ x
+x
+
+B=uH; H=I/(2*pi*ro)
+df = Idl X B
+dF = Izdl X u0 I1/(2*pi*ro)
+
+Iz = 15A; I1 = 8A
+
+(12) -> dl = dro*ay
+dF1=Iz*dro(ay)Xu0I1/(2piro)(-ax)
+int(dF1)=int (IzI1u0dro) (az)
+        1->2  (2*pi*ro)
+		
+F1=izI1u0*ln(ro)(1->2)  (az)
+  = 15*8*4piE-7*ln(2)/2pi  (az)
+  = 16.635E-6 (az) N
+
+(32) -> dl = dro*(-ay)
+dF3 = -dF1
+F3 = -F1 = 16.635E-6 (-az) N
+
+(23) -> dl=dz(-az);  ro=2m
+dF2=Iz*dz(-az)Xu0I1/(2piro)(-ax)
+   =IzI1u0dz/4pi (ay)
+F2=IzI1u0 Z(0->1)/4pi (az)
+  =12E-6 (ay) N
+
+(41) -> dl=dz(az);  ro=1m
+dF2=Iz*dz(az)Xu0I1/(2piro)(-ax)
+   =IzI1u0dz/2pi (ay)
+F2=IzI1u0 Z(0->1)/2pi (az)
+  =24E-6 (-ay) N
+  
+F = SUM(Fn) = F1+F2+F3+F4
+F = -12E-6 (ay) N
+
+
+################################
+2)Q=1.2mC v=(5,0,-3) B=(-4,4,3)
+F = Q(E + vXB)
+vXB = (12,-3,20)
+E+vXB = (3,2,10)
+F=(3.4,2.4,12)E-3 N
+|F|=12.756E-3 N
+
+################################
+3)I1dl1=-3ay; P1(5,2,1)
+  I2dl2=-3az; P2(1,8,5)
+
+r12=P2-P1=(-4,6,4); |r12|=8.246m
+r21=P1-P2=-r12;     |r21|=8.246m
+
+dF1=I1dl1XB2; B2 = u0H2
+dB2=u0I2dl2Xr21/(4pi r21^3)
+d(dF1)=I1dl1X(u0I2dl2Xr21)
+               4pi r21^3
+=  u0    * I1dl1 X (I2dl2 X r21)
+4pi*r21^3
+
+I2dl2 X r21 = (-18,-12,0)
+(-18,-12,0)XI1dl1 = (0,0,-54)
+d(dF1)=4piE-7  * (0,0,-54)
+       4pi8.246
+d(dF1) = -9.63E-9 (az) N em P1
+
+d(dF2)= u0*I2dl2 X (I1dl1 X r12)
+       4pi*r21^3
+I1dl1 X r12 = (-12,0,-18)
+I2dl2 X (-12,0,-18) = (0,36,0)
+
+d(dF2)=4piE-7  * (0,36,0)
+       4pi8.246
+d(dF2) = 6.42E-9 (ay) N em P2
+
+
+################################
+4)le = 2mm; ur>>>u0; atrito=0
+a)F=u0*He^2*S/2
+
+intl(Hdl) = nI = He*e
+He=nI/e = 100*10/2E-3 =5E5 Ae/m
+
+F =.5*4piE-7(5E5)^2*20E-4
+F =314.159 N
+
+b)e = 2->1 mm
+w1 = .5 u0*H1^2 V1
+w2 = .5 u0*H2^2 V2
+V1 = S*e1 = 20E-4*2E-3 m^3
+V2 = S*e2 = 20E-4*1E-3 m^3
+
+He=nI/e
+h1 = 100*10/2E-3 =5E5 Ae/m
+h2 = 100*10/1E-3 =1E6 Ae/m
+
+w1 = 0.628 J
+w2 = 1.256 J
+
+F=(w2-w1)/d = (1.256-0.628)/1E-3
+ = 628.318 N
+
+c)Fe = 489.618 N
+
+################################
+7)b) A Fm q atua sobre uma 
+particula carregada n dep d vel
+da mesma
+A Fm de da vel; F=q(E + vXB)
+
+################################
+8)a) atracao
+
+################################

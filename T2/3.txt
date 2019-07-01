@@ -1,0 +1,9 @@
+B=uH; H=I/(2*pi*ro)
+df = Idl X B
+
+F = Q(E + vXB)
+
+V-Vc-ri=0
+V fonte; Vc v induzida
+Vc = vBl
+Fm = BIl
